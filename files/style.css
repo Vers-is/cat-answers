@@ -82,7 +82,7 @@ input {
     background-color: rgba(219, 219, 219, 0.395);
     border: 2px solid rgba(0, 0, 0, 0.322);
     outline: none;
-    width: 60vw;
+    width: 45vw;
     max-width: 100%; 
     color: var(--orange);
     transition: all 0.3s ease;
@@ -154,7 +154,7 @@ button:hover {
 
 .cat {
     background-image: url("../sprites/orange/orange-5.PNG");
-    width: 20vw;
+    width: 25vw;
     min-width: 15vw;
     height: auto;
     aspect-ratio: 4 / 3;
