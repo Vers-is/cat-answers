@@ -47,11 +47,9 @@ const answers = [
     { text: "Да-да!", mood: "yes" }, 
     { text: "Нет, ужас какой.", mood: "absolute_no" }, 
     { text: "Надеюсь ...", mood: "no" }, 
-    { text: "Мур-р-р-нет!", mood: "very_no" },  
-    { text: "Хм, думаю, что да", mood: "yes" },  
+    { text: "Мур-р-р-нет!", mood: "very_no" },   
     { text: "Очевидно!", mood: "very_yes" },  
     { text: "Ты глупый такое спрашивать", mood: "very_no" },
-    { text: "Ну да, конечно, а ты как думал", mood: "absolute_yes" },
     { text: "Нет, конечно, а ты как думал ><", mood: "absolute_no" },
     { text: "Да нет, наверное ^__^", mood: "no" },
     { text: "Мяу-да!", mood: "very_yes" },
@@ -71,14 +69,17 @@ const answers = [
     { text: "Ага! Но это не точно", mood: "no" },
     { text: "Эм... что? :)", mood: "yes" },
     { text: "Это секрет!", mood: "absolute_yes" },
-    { text: "А что мне за это будет?", mood: "yes" },
+    { text: "А что мне за это будет?", mood: "very_yes" },
     { text: "Может быть... если хорошенько попросишь :3", mood: "yes" },
-    { text: "Я глупенькая кошечка, я не несу ответственности за свои слова", mood: "yes" },
+    { text: "Я глупенькая кошечка, я не несу ответственности за свои слова", mood: "no" },
     { text: "Конечно-конечно!", mood: "absolute_yes" },
     { text: "Точно-точно!", mood: "very_yes" },
     { text: "Звучит сомнительно, но допустим", mood: "no" },
     { text: "А давай притворимся, что это правда!", mood: "absolute_yes" },
-    { text: "Я бы ответила, но сейчас у меня лапки!", mood: "no" }
+    { text: "Я бы ответила, но сейчас у меня лапки!", mood: "no" },
+    { text: "А вот и нет!", mood: "very_no" },
+    { text: "Нет, но было б классно!", mood: "yes" },
+    { text: "Вот и я не знаю", mood: "no" }
 ];
 
 const catSprites = {
