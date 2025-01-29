@@ -63,7 +63,7 @@ html, body {
     align-items: center;
     flex-direction: column;
     margin: 2vh 10vw 5vh 10vw; 
-    gap: 10vh; 
+    gap: 5vh; 
 }
 
 .upper {
@@ -72,7 +72,7 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    height: 40vh;
+    height: 50vh;
     width: 62vw;
     padding-bottom: 5vh;
 }
@@ -95,11 +95,34 @@ html, body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
+}
+
+.cat.absolute_yes {
+    background-image: url("../sprites/sprite-7.PNG");
+}
+
+.cat.very_yes {
+    background-image: url("../sprites/sprite-6.PNG");
+}
+
+.cat.yes {
+    background-image: url("../sprites/sprite-5.PNG");
+}
+
+.cat.no {
+    background-image: url("../sprites/sprite-3.PNG");
+}
+
+.cat.very_no {
+    background-image: url("../sprites/sprite-2.PNG");
+}
+
+.cat.absolute_no {
+    background-image: url("../sprites/sprite-1.PNG");
 }
 
 .cat:hover {
-    background-color: var(--current-color);
     background-image: url("../sprites/sprite-7.PNG");
 }
 
@@ -169,10 +192,11 @@ button:hover {
     justify-content: center;
     padding: 5px;
     border-radius: 50px;
-    border: 1.5px solid grey;
+    border: 2px solid grey;
 }
 
 .color-element {
+    background-color: var(--white);
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -183,7 +207,32 @@ button:hover {
     filter: brightness(120%);
 }
 
-::selection {
+.color-element.active {
+    background-color: white;
+    border: 3px solid var(--current-color);  
+}
+
+#red{
+    background-color: var(--red);
+}
+#orange{
     background-color: var(--orange);
+}
+#blue{
+    background-color: var(--blue);
+}
+#green{
+    background-color: var(--green);
+}
+#pink{
+    background-color: var(--pink);
+}
+#purple{
+    background-color: var(--purple);
+}
+
+
+::selection {
+    background-color: var(--current-color);
     color: white;
 }
