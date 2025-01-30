@@ -6,8 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Amatic SC', sans-serif;
-    font-weight: 800;
-    font-size: 24px; 
+    font-weight: 900 !important;
+    font-size: 20px !important; 
     letter-spacing: 0.2vw;
     overflow: hidden; 
 
@@ -15,11 +15,15 @@
 
 @media (min-width: 1500px) {
     * {
-        font-size: 40px;
+        font-size: 40px !important;
     }
 }
 
 @media (max-width: 768px) {
+
+    * {
+        font-size: 16px !important;
+    }
 
     .cat-cover {
         height: 100%;
@@ -36,7 +40,7 @@
         height: 100% !important;
     }
 
-     .question, .customizer {
+    .question, .customizer {
         transform: translateY(-10vh) !important;
     }
 
@@ -59,16 +63,6 @@
         border-radius: 50px;
         border-top-left-radius: 0px;
         min-width: 60%; 
-    }
-}
-
-@media (max-width: 768px), (max-height: 768px) {
-    * {
-        font-size: 16px;
-    }
-
-    .cat {
-        background-size: contain;
     }
 }
 
@@ -153,7 +147,7 @@ html, body {
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    transition: all 0.2s ease;
+    transition: background-image 0.2s ease-in-out;
 }
 
 .cat.absolute_yes {
@@ -178,10 +172,6 @@ html, body {
 
 .cat.absolute_no {
     background-image: url("../sprites/sprite-1.PNG");
-}
-
-.cat:hover {
-    background-image: url("../sprites/sprite-7.PNG");
 }
 
 .cat-name {
@@ -349,7 +339,7 @@ button:hover {
 }
 
 strong {
-    font-size: larger;
+    font-size: larger !important;
 }
   
 .modal {
@@ -369,9 +359,8 @@ strong {
 
   .title {
     color: var(--orange);
-    font-size: 34px;
+    font-size: 40px !important;
     padding-bottom: 5vh;
-    font-weight: 900;
   }
   
   .modal-content {

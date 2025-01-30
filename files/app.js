@@ -79,7 +79,8 @@ const answers = [
     { text: "Я бы ответила, но сейчас у меня лапки!", mood: "no" },
     { text: "А вот и нет!", mood: "very_no" },
     { text: "Нет, но было б классно!", mood: "yes" },
-    { text: "Вот и я не знаю", mood: "no" }
+    { text: "Вот и я не знаю", mood: "no" },
+    { text: "Как карта ляжет!", mood: "very_yes" },
 ];
 
 const catSprites = {
@@ -91,10 +92,15 @@ const catSprites = {
     absolute_no: "../sprites/sprite-1.PNG"
 };
 
-Object.values(catSprites).forEach(src => {
+//////////////  CASH IMAGES
+const spriteUrls = ["../sprites/sprite-7.PNG", "../sprites/sprite-6.PNG", "../sprites/sprite-5.PNG", "../sprites/sprite-3.PNG", "../sprites/sprite-2.PNG", "../sprites/sprite-1.PNG"];
+
+spriteUrls.forEach(url => {
     const img = new Image();
-    img.src = src;
+    img.src = url;
 });
+
+/////////////////////////////
 
 document.getElementById('targetButton').addEventListener('click', function () {
     const input = document.getElementById('targetInput');
@@ -144,3 +150,68 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ////////////////////////
+
+
+
+///////////////////////// YOU MADE CAT SAD \ PURRING
+
+let clickCount = 0;
+let clickTimeout;
+let holdTimeout;
+let isAngry = false;
+let isHeld = false;
+
+const answerBubble = document.querySelector('.answer-bubble');
+const cat = document.getElementById('targetCat');
+
+cat.addEventListener('click', function () {
+    if (isAngry || isHeld) {
+        this.style.backgroundImage = "";
+        answerBubble.textContent = "Мур?";
+        isAngry = false;
+        isHeld = false;
+        return;
+    }
+
+    clickCount++;
+
+    if (clickTimeout) {
+        clearTimeout(clickTimeout);
+    }
+
+    if (clickCount >= 5) {
+        this.style.backgroundImage = "url('../sprites/sprite-1.PNG')";
+        answerBubble.textContent = "Прекрати!";
+
+        setTimeout(() => {
+            this.style.backgroundImage = "url('../sprites/sprite-2.PNG')";
+            answerBubble.textContent = "Погладь...";
+            isAngry = true;
+        }, 3000);
+
+        clickCount = 0;
+    }
+
+    clickTimeout = setTimeout(() => {
+        clickCount = 0;
+    }, 2000);
+});
+
+cat.addEventListener('mousedown', function () {
+    holdTimeout = setTimeout(() => {
+        this.style.backgroundImage = "url('../sprites/sprite-7.PNG')";
+        answerBubble.textContent = "Пр-р-р~";
+        isHeld = true;
+    }, 1000); 
+});
+
+cat.addEventListener('mouseup', function () {
+    if (isHeld) return;
+    clearTimeout(holdTimeout);
+});
+
+cat.addEventListener('mouseleave', function () {
+    clearTimeout(holdTimeout);
+});
+
+/////////////////////////////
