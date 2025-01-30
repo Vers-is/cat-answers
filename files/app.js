@@ -91,6 +91,11 @@ const catSprites = {
     absolute_no: "../sprites/sprite-1.PNG"
 };
 
+Object.values(catSprites).forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
 document.getElementById('targetButton').addEventListener('click', function () {
     const input = document.getElementById('targetInput');
     const answerBubble = document.querySelector('.answer-bubble');
