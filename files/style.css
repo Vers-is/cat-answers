@@ -297,9 +297,16 @@ button:hover {
 
 /*     GREETING MESSAGE */
 
+@media (min-width: 1500px) {
+    .title {
+        font-size: 60px !important;
+    }
+}
+
 @media (max-width: 768px) {
-    /* .modal-content {
-    } */
+    .modal-content {
+        min-width: 80% !important;
+    }
 
     p {
         font-size: 12px !important;
@@ -363,15 +370,17 @@ strong {
     color: var(--orange);
     font-size: 34px;
     padding-bottom: 5vh;
+    font-weight: 900;
   }
   
   .modal-content {
     background-color: #fff;
-    padding: 5vh 10vw;
+    padding: 6vh 5vw;
     border-radius: 10px;
     border: 5px solid var(--orange);
     text-align: center;
-    width: clamp(80%, 30vw, 40vw);
+    width: 40vw;
+    max-width: 40vw;
     height: auto;
   }
 
@@ -380,7 +389,7 @@ strong {
   }
   
  .cat-logo {
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
     width: clamp(100px, 5vw, 800px);
     height: auto;
     aspect-ratio: 4 / 1; 
