@@ -204,7 +204,7 @@ html, body {
 }
 
 input {
-    background-color: rgba(219, 219, 219, 0.395);
+    background-color: rgba(219, 219.5, 219, 0.395);
     border: 2px solid rgba(0, 0, 0, 0.322);
     outline: none;
     width: 45vw;
