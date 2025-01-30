@@ -167,7 +167,7 @@ const cat = document.getElementById('targetCat');
 cat.addEventListener('click', function () {
     if (isAngry || isHeld) {
         this.style.backgroundImage = "";
-        answerBubble.textContent = "Мур?";
+        answerBubble.textContent = "Хе-хе";
         isAngry = false;
         isHeld = false;
         return;
