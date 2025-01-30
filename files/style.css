@@ -21,6 +21,11 @@
 
 @media (max-width: 768px) {
 
+    * {
+        border: #FC1A44 solid 1px;
+
+    }
+
     .cat-cover {
         height: 100%;
     }
@@ -31,13 +36,17 @@
         padding-bottom: 0;
     }
 
+    .upper {
+        transform: translateY(-10vh) !important;
+    }
+
     .cat, .cat-name, .answer-bubble {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
 
     .customizer {
-        width: 40%;
+        min-width: 40%;
     }
 
     button, .question, .question__input,
@@ -49,7 +58,7 @@
     .answer-bubble {
         border-radius: 50px;
         border-top-left-radius: 0px;
-        min-width: 100%; 
+        min-width: 60%; 
     }
 }
 
@@ -249,8 +258,8 @@ button:hover {
 .color-element {
     background-color: var(--white);
     border-radius: 50%;
-    width: clamp(12px, 2vw, 32px);
-    height: clamp(12px, 2vw, 32px);
+    width: clamp(16px, 2vw, 32px);
+    height: clamp(16px, 2vw, 32px);
     transition: all 0.3s ease;
 }
 
