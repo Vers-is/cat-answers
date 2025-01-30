@@ -7,16 +7,43 @@
     box-sizing: border-box;
     font-family: 'Amatic SC', sans-serif;
     font-weight: 800;
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-size: 2vw; 
+    letter-spacing: 0.2vw;
     overflow: hidden; 
 
 }
 
 @media (max-width: 768px) {
     * {
-        font-size: 16px;
+        font-size: 24px; 
     }
+
+    .cat-cover {
+        height: 100%;
+    }
+
+    .upper, .question {
+        flex-direction: column;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .cat, .cat-name, .answer-bubble {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+
+    button, .customizer, .question, .question__input,
+    .answer-bubble, .cat-cover, .upper {
+        width: 100%;
+    }
+
+
+    .answer-bubble {
+        min-width: 100%; 
+    }
+    
 }
 
 html, body {
@@ -73,17 +100,16 @@ html, body {
 }
 
 .upper {
-    padding-left: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
     height: 50vh;
-    width: 62vw;
+    width: 100%;
     padding-bottom: 5vh;
 }
 
 .cat-cover {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,14 +118,14 @@ html, body {
 }
 
 .cat {
+    margin-left: 20vw;
     background-image: url("../sprites/sprite-5.PNG");
     background-color: var(--current-color);
-    width: 25vw;
-    min-width: 15vw;
+    width: clamp(300px, 19vw, 500px);
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1; 
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%; 
     background-repeat: no-repeat;
     transition: all 0.5s ease;
 }
@@ -133,14 +159,16 @@ html, body {
 }
 
 .cat-name {
+    margin-left: 20vw;
     font-weight: 800;
     text-align: center;
 }
 
 .answer-bubble {
+    margin-right: 10vw;
     background-color: #808080;
     color: white;
-    padding: 25px;
+    padding: 35px;
     border-radius: 50px;
     border-bottom-left-radius: 0px;
     width: 20vw;
