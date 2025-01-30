@@ -36,8 +36,11 @@
         margin-right: 0 !important;
     }
 
+    .customizer {
+        width: 40%;
+    }
 
-    button, .customizer, .question, .question__input,
+    button, .question, .question__input,
     .answer-bubble, .cat-cover, .upper {
         width: 100%;
     }
@@ -48,7 +51,6 @@
         border-top-left-radius: 0px;
         min-width: 100%; 
     }
-    
 }
 
 @media (max-width: 768px), (max-height: 768px) {
@@ -183,11 +185,11 @@ html, body {
     margin-right: 10vw;
     background-color: #808080;
     color: white;
-    padding: 35px;
+    padding: 3vw 4vw;
     border-radius: 50px;
     border-bottom-left-radius: 0px;
     width: 20vw;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .question {
@@ -212,7 +214,7 @@ input::placeholder {
 }
 
 button, input {
-    padding: 15px 40px;
+    padding: 1vw 3vw;
     cursor: pointer;
     border-radius: 50px;
 }
@@ -239,7 +241,7 @@ button:hover {
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px;
+    padding: 1vw;
     border-radius: 50px;
     border: 2px solid grey;
 }
@@ -247,8 +249,8 @@ button:hover {
 .color-element {
     background-color: var(--white);
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: clamp(12px, 2vw, 32px);
+    height: clamp(12px, 2vw, 32px);
     transition: all 0.3s ease;
 }
 
