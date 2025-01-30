@@ -31,7 +31,11 @@
         padding-bottom: 0;
     }
 
-    .upper, .question, .customizer {
+    .upper {
+        transform: translateY(-5vh) !important;
+    }
+
+     .question, .customizer {
         transform: translateY(-10vh) !important;
     }
 
@@ -227,7 +231,6 @@ button {
     background-color: var(--current-color); 
     border: 2px solid var(--current-color);
     transition: all 0.3s ease;
-
 }
 
 button:hover {
@@ -291,3 +294,93 @@ button:hover {
     background-color: var(--current-color);
     color: white;
 }
+
+/*     GREETING MESSAGE */
+
+@media (max-width: 768px) {
+    /* .modal-content {
+    } */
+
+    p{
+        font-size: 16px !important;
+        font-weight: 300;
+    }
+
+    .title {
+        font-weight: 900 !important;
+        font-size: 24px !important;
+        padding-bottom: 2vh !important;
+
+    }
+
+    .modal button {
+        width: 30%;
+        margin-top: 3vh !important;
+
+    }
+
+}
+
+#closeButton button {
+    background-color: var(--orange);
+    color: var(---orange);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.modal-content button {
+    color: white;
+    padding: 1vw 3vw;
+    margin-top: 5vh;
+}
+
+#closeButton button:hover {
+    background-color: transparent;
+    border-color: var(--orange);  
+}
+
+strong {
+    font-size: larger;
+}
+  
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    color: var(--orange);
+    font-size: 6vh;
+    padding-bottom: 5vh;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 5vh 10vw;
+    border-radius: 10px;
+    border: 5px solid var(--orange);
+    text-align: center;
+    width: clamp(30vw, 50vw, 50vw);
+    height: auto;
+  }
+
+  .modal button:hover {
+    color: var(--orange);
+  }
+  
+ .cat-logo {
+    margin-bottom: 5vh;
+    width: clamp(100px, 5vw, 500px);
+    height: auto;
+    aspect-ratio: 4 / 1; 
+ }

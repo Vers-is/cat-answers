@@ -113,3 +113,29 @@ document.getElementById('targetInput').addEventListener('keydown', function (eve
     }
 });
 //////////////////////// 
+
+
+
+/////////////////////////  GREETING MESSAGE
+const modal = document.getElementById("welcomeModal");
+const closeModal = document.getElementById("closeModal");
+const closeButton = document.getElementById("closeButton");
+
+window.onload = () => {
+  modal.style.display = "flex"; 
+};
+
+closeModal.onclick = () => {
+  modal.style.display = "none";
+};
+
+closeButton.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+////////////////////////
