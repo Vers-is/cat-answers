@@ -301,20 +301,20 @@ button:hover {
     /* .modal-content {
     } */
 
-    p{
-        font-size: 16px !important;
+    p {
+        font-size: 12px !important;
         font-weight: 300;
     }
 
     .title {
         font-weight: 900 !important;
-        font-size: 24px !important;
+        font-size: 20px !important;
         padding-bottom: 2vh !important;
 
     }
 
     .modal button {
-        width: 30%;
+        width: 15vw;
         margin-top: 3vh !important;
 
     }
@@ -360,7 +360,7 @@ strong {
 
   .title {
     color: var(--orange);
-    font-size: 6vh;
+    font-size: 34px;
     padding-bottom: 5vh;
   }
   
@@ -370,7 +370,7 @@ strong {
     border-radius: 10px;
     border: 5px solid var(--orange);
     text-align: center;
-    width: clamp(30vw, 50vw, 50vw);
+    width: clamp(60%, 50vw, 50vw);
     height: auto;
   }
 
