@@ -117,25 +117,25 @@ document.getElementById('targetInput').addEventListener('keydown', function (eve
 
 
 /////////////////////////  GREETING MESSAGE
-const modal = document.getElementById("welcomeModal");
-const closeModal = document.getElementById("closeModal");
-const closeButton = document.getElementById("closeButton");
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("welcomeModal");
+    const closeModal = document.getElementById("closeModal");
+    const closeButton = document.getElementById("closeButton");
 
-window.onload = () => {
-  modal.style.display = "flex"; 
-};
+    modal.style.display = "flex"; 
 
-closeModal.onclick = () => {
-  modal.style.display = "none";
-};
+    const closeModalFunc = () => {
+        modal.style.display = "none";
+    };
 
-closeButton.onclick = () => {
-  modal.style.display = "none";
-};
+    closeModal?.addEventListener("click", closeModalFunc);
+    closeButton?.addEventListener("click", closeModalFunc);
 
-window.onclick = (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModalFunc();
+        }
+    });
+});
+
 ////////////////////////
