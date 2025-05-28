@@ -108,16 +108,16 @@ const answers = [
 ];
 
 const catSprites = {
-    absolute_yes: "../sprites/sprite-7.PNG",
-    very_yes: "../sprites/sprite-6.PNG",
-    yes: "../sprites/sprite-5.PNG",
-    no: "../sprites/sprite-3.PNG",
-    very_no: "../sprites/sprite-2.PNG",
-    absolute_no: "../sprites/sprite-1.PNG"
+    absolute_yes: "sprites/sprite-7.PNG",
+    very_yes: "sprites/sprite-6.PNG",
+    yes: "sprites/sprite-5.PNG",
+    no: "sprites/sprite-3.PNG",
+    very_no: "sprites/sprite-2.PNG",
+    absolute_no: "sprites/sprite-1.PNG"
 };
 
 //////////////  CASH IMAGES
-const spriteUrls = ["../sprites/sprite-7.PNG", "../sprites/sprite-6.PNG", "../sprites/sprite-5.PNG", "../sprites/sprite-3.PNG", "../sprites/sprite-2.PNG", "../sprites/sprite-1.PNG"];
+const spriteUrls = ["sprites/sprite-7.PNG", "sprites/sprite-6.PNG", "sprites/sprite-5.PNG", "sprites/sprite-3.PNG", "sprites/sprite-2.PNG", "sprites/sprite-1.PNG"];
 
 spriteUrls.forEach(url => {
     const img = new Image();
@@ -204,11 +204,11 @@ cat.addEventListener('click', function () {
     }
 
     if (clickCount >= 5) {
-        this.style.backgroundImage = "url('../sprites/sprite-1.PNG')";
+        this.style.backgroundImage = "url('sprites/sprite-1.PNG')";
         answerBubble.textContent = "Прекрати!";
 
         setTimeout(() => {
-            this.style.backgroundImage = "url('../sprites/sprite-2.PNG')";
+            this.style.backgroundImage = "url('sprites/sprite-2.PNG')";
             answerBubble.textContent = "Погладь...";
             isAngry = true;
         }, 3000);
@@ -223,7 +223,7 @@ cat.addEventListener('click', function () {
 
 cat.addEventListener('mousedown', function () {
     holdTimeout = setTimeout(() => {
-        this.style.backgroundImage = "url('../sprites/sprite-7.PNG')";
+        this.style.backgroundImage = "url('sprites/sprite-7.PNG')";
         answerBubble.textContent = "Пр-р-р~";
         isHeld = true;
     }, 1000); 
